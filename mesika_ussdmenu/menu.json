@@ -1,0 +1,11 @@
+{
+"bank_code":"Mesika",
+"url":"https://localhost:24722/",
+"bank_id": "2",
+"goback_message": "Enter any digit to view the main menu!",
+"api_version": "v2",
+"logfile": "v2",
+"logger_host":"127.0.0.1",
+"logger_port":"24777"
+}
+

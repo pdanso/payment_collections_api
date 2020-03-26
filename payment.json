@@ -1,0 +1,86 @@
+{
+    "client": "CEM",
+    "app_name":"CEM_payment_collections_api",
+    "mesika": {
+    "client_id": "YzOeyMcE4RMX6seUK7M",
+    "api_key":"",
+    "license_key": "" ,
+    "sms_route": "pfovgOaZJjZRG1abnayiv4U4PHOlCKPv4ZHsPhE",
+    "sms_endpoint":"https://sms.mesika.org:7700/sms-api/messages/submit/",
+    "systems_admin_endpoint": "http://localhost:7777/systems-admin-api/users/login/",
+    "api_secret": "",
+    "api_password": "",
+    "kmm_endpoint": "http://localhost:7777/kolabo-mesika-api/core/talent/authenticate/",
+    "kcm_token_verification_endpoint": "http://localhost:7777/api/kcm/v2/client-api/",
+    "kmm_user_auth": "https://playboxbsd:9999/api/backend-auth/authenticate/"
+    },
+   "db":{
+    "db_name":"payment_collections",
+    "db_host":"db1",
+    "db_port":4004,
+    "db_user":"cemlive",
+    "db_password":"zHZpol3xillive"
+   },
+    "rabbitmq": {
+    "rabbitmq_host":"localhost",
+    "rabbitmq_port":5672,
+    "rabbitmq_vhost":"cemlive_host",
+    "rabbitmq_user":"cemlive",
+    "rabbitmq_password":"cemlive"
+   },
+    "email": {
+    "email_user":"noreply@mesika.org",
+    "email_host":"smtp.googlemail.com",
+    "email_port":587,
+    "email_password":"zHZpol3xGoIsiKWLmA"
+   },
+    "redis":{
+    "redis_host":"localhost",
+    "redis_port":6379
+   },
+  "logger":{
+    "logger_host":"logmaster.mesika.org",
+    "logger_port":24777
+   },
+    "payment_provider_endpoint":[
+    {"MTN": "https://10.85.85.65:24766/api/prymo-momo/debit-wallet/"},
+    {"VODAFONE": "https://10.85.85.65:24766/api/vodafonecash/debit-wallet/"},
+    {"AIRTELTIGO": "https://10.85.85.65:24766/api/prymo-momo/debit-wallet/"}
+  ],
+  "vodafone_db":{
+    "db_name":"vodafone_cash",
+    "db_host":"db1",
+    "db_port":8888,
+    "db_user":"vodamomo",
+    "db_password":"vodaMomoP4s5wDjio"
+   },
+  "secret_key":"lq1$oui1=6e$l)+qy&kr%zv0a*!c)i598#2-_zv39c4vg3a&4a",
+  "client_api_password_encryption_key": "g4D6x8z3Hc3qL1",
+  "sso_token_default_timeout": 8400,
+  "celery_retry_policy":{
+    "max_retries": 3,
+    "interval_start": 0,
+    "interval_step": 0.2,
+    "interval_max": 0.2
+  },
+  "celery": {
+    "default_retry_delay":3600,
+    "max_retries": 3,
+    "interval_start": 0,
+    "interval_step": 0.2,
+    "interval_max": 0.2
+  },
+  "kannel":{
+    "kannel_username": "infodlv",
+    "kannel_password": "inf0b1pp55",
+    "kannel_host":"10.85.85.45",
+    "kannel_port":"6045",
+    "kannel_dlr_endpoint": "http://10.85.85.85/sms-api/messages/update/"
+  },
+   "sms_handlers":["mesika"],
+  "default_sms_handler":"mesika",
+  "sms_source_address": "CEM",
+  "transaction_callback": "https://cem-api.mesika.org:24443/api/client-collections/v1/transactions/callback/"
+
+
+}

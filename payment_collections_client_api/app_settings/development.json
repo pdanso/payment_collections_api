@@ -1,0 +1,64 @@
+{
+  "client": "DEVELOPMENT",
+  "app_name":"payment_collections_client",
+  "mesika": {
+    "api_key":"",
+    "license_key": ""
+  },
+  "db":{
+    "db_name":"payment_collections_client",
+    "db_host":"localhost",
+    "db_port":8432,
+    "db_user":"development",
+    "db_password":"DEVELOPMENT777"
+  },
+  "auth_db":{
+    "db_name":"mesika_systems_administration",
+    "db_host":"localhost",
+    "db_port":8432,
+    "db_user":"development",
+    "db_password":"DEVELOPMENT777"
+  },
+  "rabbitmq": {
+    "rabbitmq_host":"localhost",
+    "rabbitmq_port":5672,
+    "rabbitmq_vhost":"/",
+    "rabbitmq_user":"guest",
+    "rabbitmq_password":"guest"
+  },
+  "email": {
+    "email_user":"mp7@mesika.org",
+    "email_host":"smtp.googlemail.com",
+    "email_port":587,
+    "email_password":"DN8OYfKBTZAsdg"
+  },
+  "redis":{
+    "redis_host":"localhost",
+    "redis_port":6379
+  },
+  "logger":{
+    "logger_host":"localhost",
+    "logger_port":24777
+  },
+  "payment_provider_endpoint":[
+    {"MTN": "https://10.85.85.65:24788/api/mtn-mobile-money/debitWallet"},
+    {"VODAFONE": "https://10.85.85.65:24788/api/vodafone-cash/debitWallet"},
+    {"AIRTELTIGO": "https://10.85.85.65:24788/api/airteltigo/debitWallet"}
+  ],
+  "secret_key":"lq1$6e$l)+qy&kr%zv0a*!c)i598#2-_zv39c4vg3a&4aoui1=",
+  "client_api_password_encryption_key": "g4D6x8z3Hc3qL1",
+  "sso_token_default_timeout": 8400,
+  "celery_retry_policy":{
+    "max_retries": 3,
+    "interval_start": 0,
+    "interval_step": 0.2,
+    "interval_max": 0.2
+  },
+  "kannel":{
+    "kannel_host":"10.85.85.45",
+    "kannel_port":"6045",
+    "kannel_dlr_endpoint": "https://localhost:7777/api/notifications/v1/updatestatus/"
+  },
+  "sms_source_address": "CUTRAC",
+  "transaction_callback": "https://microwatch-api.mesika.org/api/"
+}
